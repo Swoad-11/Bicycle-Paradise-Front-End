@@ -10,8 +10,8 @@ import './Home.css';
 const Home = () => {
     return (
         <>
-            <Intro></Intro>
             <Banner></Banner>
+            <Intro></Intro>
             <Service></Service>
         </>
     );

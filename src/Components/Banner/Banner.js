@@ -1,6 +1,4 @@
 import React from 'react';
-import './Banner.css';
-
 
 const Banner = () => {
     return (
@@ -28,34 +26,38 @@ const Banner = () => {
                         aria-label="Slide 3"
                     ></button>
                 </div>
-                <div className="carousel-inner relative w-full overflow-hidden">
+                <div className="carousel-inner relative overflow-hidden">
                     <div className="carousel-item active relative float-left w-full">
                         <img
-                            src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg"
+                            src="https://fraserviewbikes.ca/wp-content/uploads/2020/07/tim-foster-P_e2MgiJIz4-unsplash-1-scaled-e1649196909398-1920x600.jpg"
                             className="block w-full"
-                            alt="..."
+                            alt="Motorbike Smoke"
                         />
                         <div className="carousel-caption hidden md:block absolute text-center">
                             <h5 className="text-xl">First slide label</h5>
                             <p>Some representative placeholder content for the first slide.</p>
                         </div>
                     </div>
+
+
                     <div className="carousel-item relative float-left w-full">
                         <img
-                            src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg"
+                            src="https://static.giant-bicycles.com/Images/Giant/Showcases/Banner_ZoryaLegCover_1501193392.jpg"
                             className="block w-full"
-                            alt="..."
+                            alt="Mountaintop"
                         />
                         <div className="carousel-caption hidden md:block absolute text-center">
                             <h5 className="text-xl">Second slide label</h5>
                             <p>Some representative placeholder content for the second slide.</p>
                         </div>
                     </div>
+
+
                     <div className="carousel-item relative float-left w-full">
                         <img
-                            src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg"
+                            src="https://www.axiompd.co.uk/wp-content/uploads/2021/08/Logo-V1-1920x600.jpg"
                             className="block w-full"
-                            alt="..."
+                            alt="Woman Reading a Book"
                         />
                         <div className="carousel-caption hidden md:block absolute text-center">
                             <h5 className="text-xl">Third slide label</h5>
@@ -83,7 +85,6 @@ const Banner = () => {
                 </button>
             </div>
         </div>
-
     );
 };
 
