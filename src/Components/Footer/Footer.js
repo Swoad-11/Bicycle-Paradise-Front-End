@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png'
 
 
@@ -9,11 +10,11 @@ const Footer = () => {
         <div>
             <footer className="text-center lg:text-left bg-gray-700 text-gray-200">
                 <div className="flex justify-center items-center lg:justify-between p-6 border-b border-gray-500">
-                    <div className="mr-12 hidden lg:block">
+                    <div className="mr-12 hidden lg:block text-gray-400">
                         <span>Get connected with us on social networks:</span>
                     </div>
                     <div className="flex justify-center">
-                        <a href="#!" className="mr-6 text-red-500 hover:text-gray-200">
+                        <a href="#!" className="mr-6 hover:text-red-500 text-gray-200">
                             <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f"
                                 className="w-2.5" role="img" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 320 512">
@@ -22,7 +23,7 @@ const Footer = () => {
                                 </path>
                             </svg>
                         </a>
-                        <a href="#!" className="mr-6 text-red-500 hover:text-gray-200">
+                        <a href="#!" className="mr-6 hover:text-red-500 text-gray-200">
                             <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter"
                                 className="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                 <path fill="currentColor"
@@ -30,7 +31,7 @@ const Footer = () => {
                                 </path>
                             </svg>
                         </a>
-                        <a href="#!" className="mr-6 text-red-500 hover:text-gray-200">
+                        <a href="#!" className="mr-6 hover:text-red-500 text-gray-200">
                             <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram"
                                 className="w-3.5" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                 <path fill="currentColor"
@@ -134,7 +135,7 @@ const Footer = () => {
                 </div>
                 <div className="text-center p-6 bg-gray-900">
                     <span>© {year} Copyright: </span>
-                    <a className="text-gray-500 font-semibold" href="https://tailwind-elements.com/">Bicycle Paradise</a>
+                    <Link className="text-gray-500 font-semibold" to="/home">Bicycle Paradise</Link>
                 </div>
             </footer>
         </div>

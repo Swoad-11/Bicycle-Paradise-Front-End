@@ -47,7 +47,7 @@ const Header = () => {
                     <div className="collapse navbar-collapse flex-grow items-center" id="navbarSupportedContent1">
                         <Link to="/home" className="flex items-center">
                             <img src={logo} className="mr-3 h-6 sm:h-9" alt="Logo" />
-                            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Bicycle Paradise</span>
+                            <span className="self-center text-xl font-semibold whitespace-nowrap hover:text-red-500">Bicycle Paradise</span>
                         </Link>
                         <ul className="navbar-nav flex flex-wrap justify-between items-center mx-auto flex-col pl-0 list-style-none mr-auto">
 

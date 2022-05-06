@@ -29,13 +29,13 @@ const Banner = () => {
                 <div className="carousel-inner relative overflow-hidden">
                     <div className="carousel-item active relative float-left w-full">
                         <img
-                            src="https://fraserviewbikes.ca/wp-content/uploads/2020/07/tim-foster-P_e2MgiJIz4-unsplash-1-scaled-e1649196909398-1920x600.jpg"
+                            src="https://www.zefal.com/img/innovation_banner.png"
                             className="block w-full"
                             alt="Motorbike Smoke"
                         />
                         <div className="carousel-caption hidden md:block absolute text-center">
-                            <h5 className="text-xl">First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
+                            <h5 className="text-xl font-bold text-red-600">It's your world. Ride it!</h5>
+                            <p>Enriching lives through more freedom, fitness, and fun!</p>
                         </div>
                     </div>
 
@@ -47,8 +47,8 @@ const Banner = () => {
                             alt="Mountaintop"
                         />
                         <div className="carousel-caption hidden md:block absolute text-center">
-                            <h5 className="text-xl">Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                            <h5 className="text-xl font-semibold text-red-600">Customer Friendly</h5>
+                            <p>We always appreciate and value you.</p>
                         </div>
                     </div>
 
@@ -60,8 +60,8 @@ const Banner = () => {
                             alt="Woman Reading a Book"
                         />
                         <div className="carousel-caption hidden md:block absolute text-center">
-                            <h5 className="text-xl">Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
+                            <h5 className="text-xl font-semibold text-red-600">Love It Guarantee</h5>
+                            <p>We have your back and will always make things right!</p>
                         </div>
                     </div>
                 </div>
