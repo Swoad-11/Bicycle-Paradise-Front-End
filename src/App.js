@@ -8,9 +8,9 @@ import ErrorNotFound from "./Components/Error404/ErrorNotFound";
 import Footer from './Components/Footer/Footer';
 import Login from './Components/Login/Login/Login';
 import RequireAuth from './Components/Login/RequireAuth/RequireAuth';
-import Checkout from './Components/Checkout/Checkout';
+
 import Signup from './Components/Login/Signup/Signup';
-import ServiceDetail from './Components/ServiceDetail/ServiceDetail';
+
 import About from './Components/About/About';
 
 function App() {
@@ -20,11 +20,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
-
-        <Route path='/servicedetail' element={<ServiceDetail></ServiceDetail>}></Route>
         <Route path="/checkout" element={
           <RequireAuth>
-            <Checkout></Checkout>
+
           </RequireAuth>
         }></Route>
         <Route path='/about' element={<About></About>}></Route>

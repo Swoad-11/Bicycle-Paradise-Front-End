@@ -44,54 +44,50 @@ const Footer = () => {
                 <div className="mx-6 py-10 text-center md:text-left">
                     <div className="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div className="">
-                            <h6 className="font-semibold mb-4 flex items-center justify-center md:justify-start uppercase text-red-500">
+                            <h6 className="font-semibold title text-xl mb-4 flex items-center justify-center md:justify-start text-red-500">
                                 <img className='h-12 mr-4' src={logo} alt="" />
                                 Bicycle Paradise
                             </h6>
-                            <p>
-                                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor
-                                sit amet, consectetur adipisicing elit.
+                            <p className='description'>
+                                Our Mission - "To inspire your passion to ride so you enjoy more fitness, freedom and fun in your life"
                             </p>
                         </div>
                         <div className="">
-                            <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start text-red-500">
+                            <h6 className="uppercase secondary-title font-semibold  mb-4 flex justify-center md:justify-start text-red-500">
                                 Products
                             </h6>
-                            <p className="mb-4">
-                                <a href="#!" className="text-gray-200">Angular</a>
+                            <p className="mb-4 description">
+                                <a href="#!" className="text-gray-200">Bicycles</a>
                             </p>
-                            <p className="mb-4">
-                                <a href="#!" className="text-gray-200">React</a>
+                            <p className="mb-4 description">
+                                <a href="#!" className="text-gray-200">Helmets</a>
                             </p>
-                            <p className="mb-4">
-                                <a href="#!" className="text-gray-200">Vue</a>
-                            </p>
-                            <p>
-                                <a href="#!" className="text-gray-200">Laravel</a>
+                            <p className="mb-4 description">
+                                <a href="#!" className="text-gray-200">Other Accessories</a>
                             </p>
                         </div>
                         <div className="">
-                            <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start text-red-500">
+                            <h6 className="uppercase font-semibold secondary-title mb-4 flex justify-center md:justify-start text-red-500">
                                 Links
                             </h6>
                             <p className="mb-4">
-                                <a href="#!" className="text-gray-200">Pricing</a>
+                                <a href="#!" className="text-gray-200 description">Delivery</a>
                             </p>
                             <p className="mb-4">
-                                <a href="#!" className="text-gray-200">Settings</a>
+                                <a href="#!" className="text-gray-200 description">Community</a>
                             </p>
                             <p className="mb-4">
-                                <a href="#!" className="text-gray-200">Orders</a>
+                                <a href="#!" className="text-gray-200 description">Our Stores</a>
                             </p>
                             <p>
-                                <a href="#!" className="text-gray-200">Help</a>
+                                <a href="#!" className="text-gray-200 description">Help</a>
                             </p>
                         </div>
                         <div className="">
-                            <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start text-red-500">
+                            <h6 className="uppercase secondary-title font-semibold mb-4 flex justify-center md:justify-start text-red-500">
                                 Contact
                             </h6>
-                            <p className="flex items-center justify-center md:justify-start mb-4">
+                            <p className="flex items-center justify-center md:justify-start mb-4 description">
                                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home"
                                     className="w-4 mr-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                                     <path fill="currentColor"
@@ -100,7 +96,7 @@ const Footer = () => {
                                 </svg>
                                 New York, NY 10012, US
                             </p>
-                            <p className="flex items-center justify-center md:justify-start mb-4">
+                            <p className="flex items-center justify-center md:justify-start mb-4 description">
                                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope"
                                     className="w-4 mr-4" role="img" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 512 512">
@@ -110,7 +106,7 @@ const Footer = () => {
                                 </svg>
                                 info@example.com
                             </p>
-                            <p className="flex items-center justify-center md:justify-start mb-4">
+                            <p className="flex items-center justify-center md:justify-start mb-4 description">
                                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone"
                                     className="w-4 mr-4" role="img" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 512 512">
@@ -120,7 +116,7 @@ const Footer = () => {
                                 </svg>
                                 + 01 234 567 88
                             </p>
-                            <p className="flex items-center justify-center md:justify-start">
+                            <p className="flex items-center justify-center md:justify-start description">
                                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="print"
                                     className="w-4 mr-4" role="img" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 512 512">
@@ -133,9 +129,9 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="text-center p-6 bg-gray-900">
+                <div className="text-center p-6 bg-gray-900 ">
                     <span>© {year} Copyright: </span>
-                    <Link className="text-gray-500 font-semibold" to="/home">Bicycle Paradise</Link>
+                    <Link className="text-gray-500 font-semibold description" to="/home">Bicycle Paradise</Link>
                 </div>
             </footer>
         </div>
