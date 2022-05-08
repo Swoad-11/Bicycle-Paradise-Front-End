@@ -98,17 +98,19 @@ const Header = () => {
                                 className="dropdown-menu min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none left-auto right-0"
                                 aria-labelledby="dropdownMenuButton1"
                             >
-                                <li>
+                                <li className='grid grid-cols-1'>
+
                                     {
                                         user && <>
-                                            <Link to='/manageitems' className='mx-2 text-dark text-gray-700'>Manage Items</Link>
-                                            <Link to='/additems' className='mx-2 text-dark text-gray-700'>Add Items</Link>
-                                            <Link to='/myitems' className='mx-2 text-dark text-gray-700'>My Items</Link>
+                                            <Link to='/manageitems' className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100">Manage Items</Link>
+                                            <Link to='/additems' className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100">Add Items</Link>
+                                            <Link to='/myitems' className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100">My Items</Link>
+                                            <hr />
                                         </>
                                     }
                                     {
                                         user ?
-                                            <button className='mx-2 text-dark text-gray-700' onClick={handleSignOut}><span>Sign Out</span></button>
+                                            <button className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" onClick={handleSignOut}><span>Sign Out</span></button>
                                             :
                                             <Link
                                                 className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
