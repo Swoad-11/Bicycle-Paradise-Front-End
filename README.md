@@ -1,34 +1,32 @@
-# Sherlock Holmes Book Review App
+# Bicycle Paradise
 
-## [Live Website Link](https://the-hijibiji-canvas.netlify.app/)
+## [Live Website Link](bicycle-paradise.web.app)
 
-Private repository link: [https://github.com/programming-hero-web-course-4/independent-service-provider-Swoad-11](https://github.com/programming-hero-web-course-4/independent-service-provider-Swoad-11)
+Private client-side repository link: [https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-Swoad-11](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-Swoad-11)
+
+Private server-side repository link: [https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-Swoad-11](https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-Swoad-11)
 
 ## Description
-This is an website of an individual artist for selling his arts of different categories.
-In this project, there are five main pages, one Error-404 page,one service detail page and one check out page:
+This is an website of an bicycle warehouse.
+In this project, there are three main pages, one Error-404 page:
 
 ### `HOME page`
 
-Cover Page
+Consists of Banner, Intro, Items, JoinUs
 
-### `Banner`
+### `Blogs`
 
-Artist works.
+4 questions and answer
 
-### `Service`
+### `About`
 
-Services provided by the artist.
-
-### `BLOGS page`
-
-Question-Answers
-
-### `ABOUT page`
-
-About the Artist
+About the warehouse
 
 ### `ERROR-404 page`
 
 If page not found.
+
+### `All pages shared header & footer`
+
+### `There are some private pages and routes which requires user to log in`
 

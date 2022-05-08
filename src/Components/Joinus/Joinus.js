@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Joinus = () => {
     return (
@@ -16,11 +17,13 @@ const Joinus = () => {
                         <div className="text-center px-6 md:px-12">
                             <h3 className="secondary-title text-3xl text-red-500 font-bold mb-1">Where All Riders Belong</h3>
                             <p className="description text-2xl text-white mb-4">Things are better as a member. Get first and exclusive access to the newest styles & innovations, birthday rewards, points for purchases and more.</p>
-                            <button type="button"
-                                className="inline-block px-6 py-2.5 border-2 border-white text-white hover:border-red-500 hover:text-red-500 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-                                data-mdb-ripple="true" data-mdb-ripple-color="light">
-                                Sign Up
-                            </button>
+                            <Link to="/signup">
+                                <button type="button"
+                                    className="inline-block px-6 py-2.5 border-2 border-white text-white hover:border-red-500 hover:text-red-500 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+                                    data-mdb-ripple="true" data-mdb-ripple-color="light">
+                                    Sign Up
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
