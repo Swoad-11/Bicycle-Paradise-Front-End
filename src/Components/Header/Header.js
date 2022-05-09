@@ -2,10 +2,10 @@ import React from 'react';
 import CustomLink from '../CustomLink/CustomLink';
 import auth from '../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { signOut } from 'firebase/auth';
 import logo from '../../images/logo.png';
 
 import { Link } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
     const [user] = useAuthState(auth);
@@ -95,7 +95,7 @@ const Header = () => {
                                 </svg>
                             </a>
                             <ul
-                                className="dropdown-menu min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none left-auto right-0"
+                                className="dropdown-menu min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 m-0 bg-clip-padding border-none left-auto right-0"
                                 aria-labelledby="dropdownMenuButton1"
                             >
                                 <li className='grid grid-cols-1'>

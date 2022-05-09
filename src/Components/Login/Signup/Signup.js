@@ -27,7 +27,7 @@ const Signup = () => {
     }
 
     if (user) {
-        console.log('user', user);
+        navigate('/home');
     }
 
     const handleRegister = async (event) => {
@@ -39,8 +39,6 @@ const Signup = () => {
 
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
-
-        navigate('/home');
     }
     return (
         <div>

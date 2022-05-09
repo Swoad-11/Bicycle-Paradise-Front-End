@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Link, useNavigate } from 'react-router-dom';
+import useItems from '../../Hooks/useItems';
+import Items from '../../Items/Items';
+
 
 const Service = () => {
+    const [items, setItems] = useItems();
+
+
+    const lessItems = items.slice(0, 6);
     const navigate = useNavigate();
 
-    const navigateToServiceDetail = () => {
-        navigate('/servicedetail');
+    const navigateInventory = () => {
+        navigate('/inventory');
     }
     return (
         <div>
@@ -15,117 +22,22 @@ const Service = () => {
                 <h1 className="secondary-title text-4xl font-bold mt-8 mb-5 text-center text-red-600">Items</h1>
             </div>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 mb-5 p-5 mx-auto items-center'>
-
-                <div className="flex justify-center">
-                    <div className="rounded-lg shadow-lg bg-red-100 max-w-sm">
-                        <a href="#!">
-                            <img src="https://mdbootstrap.com/img/new/standard/city/047.jpg" className="max-w-full h-auto rounded-lg p-1" alt="" />
-                        </a>
-                        <div className="p-6">
-                            <h5 className="secondary-title text-gray-900 text-xl font-medium mb-2">Card title</h5>
-                            <p className="description text-gray-700 text-base mb-4">
-                                Some quick example text to build on the card title and make up the bulk of the card's
-                                content.
-                            </p>
-                            <Link to="/inventory">
-                                <button type="button" className="secondary-title inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="flex justify-center">
-                    <div className="rounded-lg shadow-lg bg-red-100 max-w-sm">
-                        <a href="#!">
-                            <img src="https://mdbootstrap.com/img/new/standard/city/047.jpg" className="max-w-full h-auto rounded-lg p-1" alt="" />
-                        </a>
-                        <div className="p-6">
-                            <h5 className="secondary-title text-gray-900 text-xl font-medium mb-2">Card title</h5>
-                            <p className="description text-gray-700 text-base mb-4">
-                                Some quick example text to build on the card title and make up the bulk of the card's
-                                content.
-                            </p>
-                            <Link to="/inventory">
-                                <button type="button" className="secondary-title inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="flex justify-center">
-                    <div className="rounded-lg shadow-lg bg-red-100 max-w-sm">
-                        <a href="#!">
-                            <img src="https://mdbootstrap.com/img/new/standard/city/047.jpg" className="max-w-full h-auto rounded-lg p-1" alt="" />
-                        </a>
-                        <div className="p-6">
-                            <h5 className="secondary-title text-gray-900 text-xl font-medium mb-2">Card title</h5>
-                            <p className="description text-gray-700 text-base mb-4">
-                                Some quick example text to build on the card title and make up the bulk of the card's
-                                content.
-                            </p>
-                            <Link to="/inventory">
-                                <button type="button" className="secondary-title inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="flex justify-center">
-                    <div className="rounded-lg shadow-lg bg-red-100 max-w-sm">
-                        <a href="#!">
-                            <img src="https://mdbootstrap.com/img/new/standard/city/047.jpg" className="max-w-full h-auto rounded-lg p-1" alt="" />
-                        </a>
-                        <div className="p-6">
-                            <h5 className="secondary-title text-gray-900 text-xl font-medium mb-2">Card title</h5>
-                            <p className="description text-gray-700 text-base mb-4">
-                                Some quick example text to build on the card title and make up the bulk of the card's
-                                content.
-                            </p>
-                            <Link to="/inventory">
-                                <button type="button" className="secondary-title inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="flex justify-center">
-                    <div className="rounded-lg shadow-lg bg-red-100 max-w-sm">
-                        <a href="#!">
-                            <img src="https://mdbootstrap.com/img/new/standard/city/047.jpg" className="max-w-full h-auto rounded-lg p-1" alt="" />
-                        </a>
-                        <div className="p-6">
-                            <h5 className="secondary-title text-gray-900 text-xl font-medium mb-2">Card title</h5>
-                            <p className="description text-gray-700 text-base mb-4">
-                                Some quick example text to build on the card title and make up the bulk of the card's
-                                content.
-                            </p>
-                            <Link to="/inventory">
-                                <button type="button" className="secondary-title inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="flex justify-center">
-                    <div className="rounded-lg shadow-lg bg-red-100 max-w-sm">
-                        <a href="#!">
-                            <img src="https://mdbootstrap.com/img/new/standard/city/047.jpg" className="max-w-full h-auto rounded-lg p-1" alt="" />
-                        </a>
-                        <div className="p-6">
-                            <h5 className="secondary-title text-gray-900 text-xl font-medium mb-2">Card title</h5>
-                            <p className="description text-gray-700 text-base mb-4">
-                                Some quick example text to build on the card title and make up the bulk of the card's
-                                content.
-                            </p>
-                            <Link to="/inventory">
-                                <button type="button" className="secondary-title inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Update</button>
-                            </Link>
-                        </div>
-
-                    </div>
-                </div>
+                {
+                    lessItems.map(item => <Items
+                        key={item._id}
+                        item={item}
+                    >
+                    </Items>)
+                }
             </div>
+
+
             <div className='flex space-x-2 justify-center'>
                 <Link to="/manageinventory">
                     <button type="button" className="secondary-title inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Manage Inventory</button>
                 </Link>
             </div>
-        </div>
+        </div >
     );
 };
 
