@@ -4,7 +4,7 @@ const useItemDetail = itemId => {
     const [item, setItem] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/items/${itemId}`;
+        const url = `https://shrouded-sands-14035.herokuapp.com/items/${itemId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data));
