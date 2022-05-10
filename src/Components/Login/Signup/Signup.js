@@ -52,7 +52,7 @@ const Signup = () => {
                     <input type="password" className='block mb-2 w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-red-600 focus:outline-none' name="password" id="" placeholder='Password' required />
                     <div className='grid grid-cols-1'>
                         <div className='my-5'>
-                            <input onClick={() => setAgree(!agree)} className='mx-2' type="checkbox" name="terms" id="terms" />
+                            <input onClick={() => setAgree(!agree)} className='form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-red-600 checked:border-red-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer' type="checkbox" name="terms" id="terms" />
                             <label className={`ps-2 ${agree ? '' : 'text-blue-700'}`} htmlFor="terms">Accept Our Terms and Conditions</label>
                         </div>
                         <input
