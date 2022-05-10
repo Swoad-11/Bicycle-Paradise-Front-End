@@ -33,30 +33,32 @@ const Inventory = () => {
         if (newQuantity > 0) {
             let totalQuantity = parseInt(quantityNumber) + parseInt(newQuantity);
             oldQuantity.innerText = totalQuantity;
-            let finalValue = stringify(totalQuantity);
+            const finalValue = totalQuantity.toString();
             console.log(finalValue);
+
+            const updatedQuantity = { finalValue };
+
+            console.log(updatedQuantity);
+
+            // send data to the server
+            const url = `https://shrouded-sands-14035.herokuapp.com/items/${_id}`;
+            fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(updatedQuantity)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    alert('Added successfully!!!');
+                    event.target.reset();
+                });
         }
 
-        const quantity = event.target.quantity.value;
-        const updatedQuantity = { quantity };
+        //const quantity = event.target.quantity.value;
 
-        console.log(updatedQuantity);
-
-        // send data to the server
-        const url = `https://shrouded-sands-14035.herokuapp.com/items/${_id}`;
-        fetch(url, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(updatedQuantity)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                alert('Added successfully!!!');
-                event.target.reset();
-            });
     }
 
 
