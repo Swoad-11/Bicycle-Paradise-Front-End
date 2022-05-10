@@ -1,10 +1,11 @@
+import { stringify } from 'json5';
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import useItemDetail from '../../Hooks/useItemDetail';
 
 const Inventory = () => {
     const { itemId } = useParams();
-    console.log(itemId);
+
     const [item] = useItemDetail(itemId);
     const { _id, name, image, description, price, quantity, supplier } = item;
 
@@ -22,17 +23,40 @@ const Inventory = () => {
         }
     }
 
-    const restockItem = (e) => {
-        e.preventDefault();
+    const restockItem = (event) => {
+        event.preventDefault();
         const inputQuantity = document.getElementById('inputQuantity');
         const newQuantity = inputQuantity.value;
 
-        let quantity = document.getElementById('quantity');
-        let quantityNumber = quantity.innerText;
+        let oldQuantity = document.getElementById('quantity');
+        let quantityNumber = oldQuantity.innerText;
         if (newQuantity > 0) {
             let totalQuantity = parseInt(quantityNumber) + parseInt(newQuantity);
-            quantity.innerText = totalQuantity;
+            oldQuantity.innerText = totalQuantity;
+            let finalValue = stringify(totalQuantity);
+            console.log(finalValue);
         }
+
+        const quantity = event.target.quantity.value;
+        const updatedQuantity = { quantity };
+
+        console.log(updatedQuantity);
+
+        // send data to the server
+        const url = `https://shrouded-sands-14035.herokuapp.com/items/${_id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedQuantity)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                alert('Added successfully!!!');
+                event.target.reset();
+            });
     }
 
 
@@ -73,7 +97,7 @@ const Inventory = () => {
                         <form onSubmit={restockItem}>
                             <h1 className="secondary-title text-xl font-bold mt-8 mb-2 text-center text-red-600"><span className='text-gray-700'>Restock Product</span> {_id}</h1>
                             <div className="form-group mb-6">
-                                <input type="text" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-red-600 focus:outline-none" id="inputQuantity"
+                                <input type="text" name="quantity" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-red-600 focus:outline-none" id="inputQuantity"
                                     placeholder="0" />
                             </div>
                             <button type="submit" className=" w-full px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg  focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Restock</button>
