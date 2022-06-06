@@ -2,9 +2,8 @@
 
 ## [Live Website Link](https://bicycle-paradise.web.app/)
 
-Private client-side repository link: [https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-Swoad-11](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-Swoad-11)
 
-Private server-side repository link: [https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-Swoad-11](https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-Swoad-11)
+Back-End repository link: [https://github.com/Swoad-11/Bicycle-Paradise-Back-End](https://github.com/Swoad-11/Bicycle-Paradise-Back-End)
 
 ## Description
 This is an website of an bicycle warehouse.
